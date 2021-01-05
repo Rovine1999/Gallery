@@ -4,23 +4,20 @@
 A personal gallery application that displays my photos for others to see.
 
 #### Setup/Installation Requirements
-The first thing to do is to clone the repository:
+1. The first thing to do is to clone the repository: $ git clone https://github.com/Rovine1999/Gallery.git
+2. $ cd Gallery
+3. Create a virtual environment to install dependencies in and activate it:
 
-$ git clone https://github.com/Rovine1999/Gallery.git
-$ cd Gallery
-Create a virtual environment to install dependencies in and activate it:
+4. $ python3.6 -m venv --without-pip virtual- depending on the version of your python package
+5. $ source virtual/bin/activate
+6. Then install the dependencies: (virtual)$ pip install -r requirements.txt
 
-$ python3.6 -m venv --without-pip virtual- depending on the version of your python package
-$ source virtual/bin/activate
-Then install the dependencies:
-(virtual)$ pip install -r requirements.txt
+## Note the (virtual) in front of the prompt. This indicates that this terminal session operates in a virtual environment set up by virtualenv2.
 
-Note the (virtual) in front of the prompt. This indicates that this terminal session operates in a virtual environment set up by virtualenv2.
+# Once pip has finished downloading the dependencies:
 
-Once pip has finished downloading the dependencies:
-
-(virtual)$ cd project
-(virtual)$ python manage.py runserver
+7. (virtual)$ cd Gallery
+8. (virtual)$ python manage.py runserver
 And navigate to http://127.0.0.1:8000/Gallery/.
 
 In order to test the purchase flows, fill in the account details in project/views.py to match your SANDBOX developer credentials.
