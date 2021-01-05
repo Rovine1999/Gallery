@@ -12,9 +12,9 @@ A personal gallery application that displays my photos for others to see.
 5. $ source virtual/bin/activate
 6. Then install the dependencies: (virtual)$ pip install -r requirements.txt
 
-## Note the (virtual) in front of the prompt. This indicates that this terminal session operates in a virtual environment set up by virtualenv2.
+###### Note the (virtual) in front of the prompt. This indicates that this terminal session operates in a virtual environment set up by virtualenv2.
 
-# Once pip has finished downloading the dependencies:
+###### Once pip has finished downloading the dependencies:
 
 7. (virtual)$ cd Gallery
 8. (virtual)$ python manage.py runserver
