@@ -32,10 +32,11 @@ Technology used in the development of this application is HTML in templates and 
 #### Support and contact details
 You can find me:
 
-twiter: @rovinewanjala.
-instangram @rovinewanjala.
-facebook @sygel sydney.
-hollame +254712387089.
+1. twiter: @rovinewanjala.
+2. instangram @rovinewanjala.
+3. facebook @sygel sydney.
+4. hollame +254712387089.
+
 ### License
 ### MIT License
 
