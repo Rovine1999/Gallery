@@ -1,5 +1,5 @@
 #### BY
-#### Rovine Sydney Wanjala, 20/11/2020
+#### Rovine Sydney Wanjala, 05/01/2021
 #### Description
 A personal gallery application that displays my photos for others to see.
 
