@@ -13,7 +13,6 @@ def search_results(request):
     if 'category' in request.GET and request.GET["category"]:
         category = request.GET.get("category")
         searched_images = Image.search_by_category(category)
-        # searched_images = Image.filter_by_location(category)
         message = f"{category}"
         return render(request, 'search.html', {"message": message, "images": searched_images})
     else:
