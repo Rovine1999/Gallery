@@ -1,8 +1,7 @@
 from . import views
-from django.urls import include, path
+from django.urls import path
 
 urlpatterns = [
-    path('^$', views.gallery, name = 'gallery'),
-    path('gallery/', include('gallery.urls')),
+    path('', views.gallery, name = 'gallery'),
     path('search/location', views.search_location, name = 'search_location')
 ]
