@@ -17,5 +17,5 @@ class TestImage(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.image_test, Image))
 
-    def test_save_method(self)
-    
+    # def test_save_method(self):
+
