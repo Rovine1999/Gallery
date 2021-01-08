@@ -22,7 +22,7 @@ class TestImage(TestCase):
         image_test=Image.objects.all()
         self.assertTrue(len(image_test) > 0)
 
-    def test_save_method(self):
+    def test_delete_method(self):
         self.image_test.delete_image()
         image_test=Image.objects.all()
         self.assertTrue(len(image_test)== 0)
@@ -53,4 +53,7 @@ class TestLocation(TestCase):
         self.assertTrue(len(location) > 0)    
         
 
-    
+    def test_delete_method(self):
+        self.location.delete_location()
+        location=Location.objects.all()
+        self.assertTrue(len(location)== 0)
