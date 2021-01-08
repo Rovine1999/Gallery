@@ -34,6 +34,15 @@ class Category(models.Model):
         self.delete()
 
 
+    @classmethod
+    def update_image(cls, id, value):
+        cls.objects.filter(id=id).update(name = value)
+
+    def __str__(self):
+        return self.name
+    
+
+
     
 
 
