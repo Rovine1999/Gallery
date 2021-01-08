@@ -44,6 +44,12 @@ class TestLocation(TestCase):
 
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.location, Location))    
+        self.assertTrue(isinstance(self.location, Location))
+
+
+    def test_save_method(self):
+        self.location.save_image()
+        location=Location.objects.all()
+        self.assertTrue(len(location) > 0)    
         
 
