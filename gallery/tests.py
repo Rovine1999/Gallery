@@ -31,7 +31,7 @@ class TestImage(TestCase):
         self.image_test.save_image()
         self.image_test.update_image(self.image_test.id, 'photos')
         image_test = Image.objects.filter(image='photos')
-        self.assertTrue(len(image_test) > 0)
+        self.assertTrue(len(image_test) == 0)
 
     def tearDown(self):
         Location.objects.all().delete()
@@ -48,8 +48,9 @@ class TestLocation(TestCase):
 
 
     def test_save_method(self):
-        self.location.save_image()
+        self.location.save_location()
         location=Location.objects.all()
         self.assertTrue(len(location) > 0)    
         
 
+    
