@@ -82,4 +82,12 @@ class TestCategory(TestCase):
         category=Category.objects.all()
         self.assertTrue(len(category)== 0)
 
+
+    def test_update_category(self):
+        self.category.update_category(id=id, value=value)
+        self.category.update_category(self.category.id, 'Travel')
+        category = Category.objects.filter(category='Travel')
+        self.assertTrue(len(category) == 0)
+
+
        
