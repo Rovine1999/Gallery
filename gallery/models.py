@@ -25,14 +25,14 @@ class Location(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=50):
+    name = models.CharField(max_length=50)
 
     
 
 
 
 class Image(models.Model):
-    image = CloudinaryField('image')
+    image = models.ImageField(blank=True, null=True,upload_to='photos/')
     name = models.CharField(max_length=60)
     description = models.TextField()
     author = models.CharField(max_length=40, default='admin')
