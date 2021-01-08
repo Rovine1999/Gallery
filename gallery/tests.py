@@ -20,7 +20,7 @@ class TestImage(TestCase):
     def test_save_method(self):
         self.image_test.save_image()
         image_test=Image.objects.all()
-        self.assertTrue(len(image_test) >0)
+        self.assertTrue(len(image_test) > 0)
 
     def test_save_method(self):
         self.image_test.delete_image()
@@ -29,8 +29,13 @@ class TestImage(TestCase):
 
     def test_update_image(self):
         self.image_test.save_image()
-        self.image_test.update_image(self.new_image.id, 'photos/test.jpg')
-        changed_img = Image.objects.filter(image='photos/test.jpg')
-        self.assertTrue(len(changed_img) > 0)
+        self.image_test.update_image(self.image_test.id, 'photos')
+        image_test = Image.objects.filter(image='photos')
+        self.assertTrue(len(image_test) > 0)
 
+    def tearDown(self):
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+        Image.objects.all().delete()
+        
 
