@@ -64,4 +64,7 @@ class TestLocation(TestCase):
     #     location = Location.objects.filter(location='value')
     #     self.assertTrue(len(location) == 0)
 
-    class TestCategory(TestCase):
+class TestCategory(TestCase):
+    def setUp():
+        self.category = Category(name='Travel')
+       
