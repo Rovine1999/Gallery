@@ -66,5 +66,14 @@ class TestLocation(TestCase):
 
 class TestCategory(TestCase):
     def setUp():
-        self.category = Category(name='Travel')
+        self.category = Category(id=1,name='Travel')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.category, Category))
+
+    def test_save_method(self):
+        self.location.save_category()
+        category=Category.objects.all()
+        self.assertTrue(len(category) > 0) 
+
        
