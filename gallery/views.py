@@ -4,7 +4,7 @@ import datetime as dt
 from .models import Image,Location,Category
 
 # Create your views here.
-def my_gallery(request):
+def gallery(request):
     date = dt.date.today()
     images = Image.objects.all()
     return render(request, 'gallery.html', {"date": date,"images":images})
