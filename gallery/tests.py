@@ -40,6 +40,10 @@ class TestImage(TestCase):
 
 class TestLocation(TestCase):
     def setUp(self):
-        self.location = Location(id=1,name='Nairobi')    
+        self.location = Location(id=1,name='Nairobi')
+
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.location, Location))    
         
 
