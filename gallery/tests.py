@@ -58,11 +58,11 @@ class TestLocation(TestCase):
         location=Location.objects.all()
         self.assertTrue(len(location)== 0)
 
-    # def test_update_location(self):
-    #     self.location.update_location(id=id, value=value)
-    #     self.location.update_location(self.location.id, 'value')
-    #     location = Location.objects.filter(location='value')
-    #     self.assertTrue(len(location) == 0)
+    def test_update_location(self):
+        self.location.update_location(id=id, value=value)
+        self.location.update_location(self.location.id, 'value')
+        location = Location.objects.filter(location='value')
+        self.assertTrue(len(location) == 0)
 
 class TestCategory(TestCase):
     def setUp():
@@ -75,5 +75,11 @@ class TestCategory(TestCase):
         self.location.save_category()
         category=Category.objects.all()
         self.assertTrue(len(category) > 0) 
+
+
+    def test_delete_method(self):
+        self.category.delete_category()
+        category=Category.objects.all()
+        self.assertTrue(len(category)== 0)
 
        
