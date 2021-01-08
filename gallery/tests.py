@@ -57,3 +57,11 @@ class TestLocation(TestCase):
         self.location.delete_location()
         location=Location.objects.all()
         self.assertTrue(len(location)== 0)
+
+    # def test_update_location(self):
+    #     self.location.update_location(id=id, value=value)
+    #     self.location.update_location(self.location.id, 'value')
+    #     location = Location.objects.filter(location='value')
+    #     self.assertTrue(len(location) == 0)
+
+    class TestCategory(TestCase):
