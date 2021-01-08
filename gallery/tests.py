@@ -37,5 +37,7 @@ class TestImage(TestCase):
         Location.objects.all().delete()
         Category.objects.all().delete()
         Image.objects.all().delete()
+
+class TestLocation(TestCase):     
         
 
