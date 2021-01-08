@@ -38,6 +38,8 @@ class TestImage(TestCase):
         Category.objects.all().delete()
         Image.objects.all().delete()
 
-class TestLocation(TestCase):     
+class TestLocation(TestCase):
+    def setUp(self):
+        self.location = Location(id=1,name='Nairobi')    
         
 
