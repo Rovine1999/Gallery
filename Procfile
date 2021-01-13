@@ -1,1 +1,1 @@
-web: gunicorn wanjala-gallery.wsgi --log-file -
+web: gunicorn myphotos.wsgi --log-file -
