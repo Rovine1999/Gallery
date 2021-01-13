@@ -1,0 +1,1 @@
+web: gunicorn wanjala-gallery.wsgi --log-file -

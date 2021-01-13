@@ -33,10 +33,7 @@ class TestImage(TestCase):
         image_test = Image.objects.filter(image='photos')
         self.assertTrue(len(image_test) == 0)
 
-    def tearDown(self):
-        Location.objects.all().delete()
-        Category.objects.all().delete()
-        Image.objects.all().delete()
+    
 
 class TestLocation(TestCase):
     def setUp(self):
@@ -59,20 +56,20 @@ class TestLocation(TestCase):
         self.assertTrue(len(location)== 0)
 
     def test_update_location(self):
-        self.location.update_location(id=id, value=value)
-        self.location.update_location(self.location.id, 'value')
-        location = Location.objects.filter(location='value')
+        
+        self.location.update_location(self.location.id, 'Nairobi')
+        location = Location.objects.filter(name = 'Nairobi')
         self.assertTrue(len(location) == 0)
 
 class TestCategory(TestCase):
-    def setUp():
+    def setUp(self):
         self.category = Category(id=1,name='Travel')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.category, Category))
 
     def test_save_method(self):
-        self.location.save_category()
+        self.category.save_category()
         category=Category.objects.all()
         self.assertTrue(len(category) > 0) 
 
@@ -84,10 +81,12 @@ class TestCategory(TestCase):
 
 
     def test_update_category(self):
-        self.category.update_category(id=id, value=value)
         self.category.update_category(self.category.id, 'Travel')
-        category = Category.objects.filter(category='Travel')
+        category = Category.objects.filter(name = 'Travel')
         self.assertTrue(len(category) == 0)
 
 
-       
+    def tearDown(self):
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+        Image.objects.all().delete()
